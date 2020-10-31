@@ -11,3 +11,4 @@ def getSales(price, oneProduct = True):
         df = pd.read_csv('Data\\sales2p.csv')
     id = df['cost'].sub(cash).abs().idxmin()
     return df.iloc[id]['percentage']
+
