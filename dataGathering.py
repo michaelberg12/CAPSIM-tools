@@ -2,8 +2,7 @@ from PIL import Image
 import pandas as pd
 from statistics import mean
 import numpy as np
-import marketing as mk
-from model import Model
+
 
 def extractGraph(file_path, box):
     im = Image.open(file_path)
@@ -46,7 +45,7 @@ def generateChartData():
     imagePath = 'Photos\\figure_4_2.png'
     box = (51,37,384,248)
     df = extractGraph(imagePath, box)
-    df = formatData(3000, 0.5, df)
+    df = formatData(3229, 0.5, df)
     df.to_csv('Data\\promotion.csv')
     print(df)
 
@@ -63,7 +62,3 @@ def generateChartData():
     df = formatData(4642, 0.3529, df)
     df.to_csv('Data\\sales2p.csv')
     print(df)
-
-
-
-        

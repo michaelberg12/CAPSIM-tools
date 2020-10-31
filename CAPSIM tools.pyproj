@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>1d50eb08-de8c-4858-bd11-40753a52f5ab</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>dataGathering.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,11 +24,14 @@
     <Compile Include="marketing.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="dataGathering.py" />
+    <Compile Include="main.py" />
     <Compile Include="constants.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="model.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="dataGathering.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
