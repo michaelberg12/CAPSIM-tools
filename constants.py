@@ -14,22 +14,22 @@ class Constants:
     _SEGMENT = {'Trad':0, 'Low':1, 'High':2, 'Perf':3, 'Size':4}
 
     def pfmn(self, round, segment):
-        seg = _SEGMENT[segment]
-        return _PFMN[seg] + round*_PFMN_D[seg]
+        seg = self._SEGMENT[segment]
+        return self._PFMN[seg] + round*self._PFMN_D[seg]
 
     def size(self, round, segment):
-        seg = _SEGMENT[segment]
-        return _SIZE[seg] + round*_SIZE_D[seg]
+        seg = self._SEGMENT[segment]
+        return self._SIZE[seg] + round*self._SIZE_D[seg]
 
     def age(self, segment):
-        seg = _SEGMENT[segment]
-        return _AGE[seg]
+        seg = self._SEGMENT[segment]
+        return self._AGE[seg]
 
     def mtbf(self, segment):
-        seg = _SEGMENT[segment]
-        return _MTBF[seg]
+        seg = self._SEGMENT[segment]
+        return self._MTBF[seg]
 
     def price(self, round, segment):
-        seg = _SEGMENT[segment]
-        return _PRICE[seg] - round*0.5
+        seg = self._SEGMENT[segment]
+        return self._PRICE[seg] - round*0.5
 

@@ -1,3 +1,6 @@
+from constants import Constants
+import math
+
 class Model:
 
     _CONSTANT = [4.624179, 23.20088, -1.906446, -6.159904, 18.77025]
@@ -18,9 +21,22 @@ class Model:
 
     _SEGMENT = {'Trad':0, 'Low':1, 'High':2, 'Perf':3, 'Size':4}
 
-    def __init__(self, constant, round, segment):
-        self.constant = constant
+    def __init__(self, round, segment):
         self.round = round
         self.segment = segment
 
-    def results(age, price, awar, acc, pfmn, size, mtbf):
+    def results(self, age, price, awar, acc, pfmn, size, mtbf):
+        con = Constants()
+
+        seg = self._SEGMENT[self.segment]
+
+        pfmn_i = con.pfmn(self.round, self.segment)
+        size_i = con.size(self.round, self.segment)
+
+        dif_ideal = math.sqrt(pow(pfmn - pfmn_i,2) + pow(size - size_i,2))
+        dif_age = age - con.age(self.segment)
+        dif_mtbf = mtbf - con.mtbf(self.segment)
+        dif_price = price - con.price(self.round, self.segment)
+
+        return (self._CONSTANT[seg] + self._IDEAL[seg] * dif_ideal + self._AGE[seg] * dif_age + self._MTBF[seg] * dif_mtbf + self._ACC[seg] * (100 * acc) + self._AWAR[seg] * (100 * awar) + self._PRICE[seg] * dif_price)
+

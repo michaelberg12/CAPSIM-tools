@@ -3,6 +3,7 @@ import pandas as pd
 from statistics import mean
 import numpy as np
 import marketing as mk
+from model import Model
 
 def extractGraph(file_path, box):
     im = Image.open(file_path)
@@ -63,6 +64,6 @@ def generateChartData():
     df.to_csv('Data\\sales2p.csv')
     print(df)
 
-generateChartData()
-print(mk.getPromotion(2000))
+
+
         
