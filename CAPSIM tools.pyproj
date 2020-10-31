@@ -21,10 +21,15 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="marketing.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="dataGathering.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\promotion.csv" />
+    <Content Include="Data\sales1p.csv" />
+    <Content Include="Data\sales2p.csv" />
     <Content Include="Photos\figure_4_2.png" />
     <Content Include="Photos\sales-1p.png" />
     <Content Include="Photos\sales-2p.png" />
