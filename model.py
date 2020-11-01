@@ -2,7 +2,6 @@ from constants import Constants
 import math
 
 class Model:
-
     _CONSTANT = [4.624179, 23.20088, -1.906446, -6.159904, 18.77025]
 
     _IDEAL = [-6.180388,-7.161307,-10.58551,-6.918329,-15.60442]

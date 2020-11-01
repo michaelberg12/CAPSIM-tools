@@ -62,3 +62,6 @@ def generateChartData():
     df = formatData(4642, 0.3529, df)
     df.to_csv('Data\\sales2p.csv')
     print(df)
+
+def readInSimData():
+    return pd.read_csv(r'D:\documents\Capsim Data\CleanedData.csv')
