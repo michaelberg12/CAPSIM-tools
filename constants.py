@@ -1,3 +1,5 @@
+import math
+
 class Constants:
     _PFMN = [5,1.7,8.9,9.4,4]
     _SIZE = [15,18.3,11.1,16,10.6]
@@ -20,6 +22,9 @@ class Constants:
     def size(self, round, segment):
         seg = self._SEGMENT[segment]
         return self._SIZE[seg] + round*self._SIZE_D[seg]
+
+    def difIdeal(round, segment, size, pfmn):
+       math.sqrt(math.pow(self.size(round, segment) - size,2) + math.pow(self.pfmn(round, segment) - pfmn,2))
 
     def age(self, segment):
         seg = self._SEGMENT[segment]

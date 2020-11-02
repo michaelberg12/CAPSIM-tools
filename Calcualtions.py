@@ -1,5 +1,4 @@
-
-class Profit:
+class Calculations:
 
     def __init__(self, segmentSize, growth, laborCost):
         self.segmentSize = segmentSize * (1 + growth)

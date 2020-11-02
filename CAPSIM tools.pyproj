@@ -34,7 +34,7 @@
     <Compile Include="dataGathering.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Profit.py">
+    <Compile Include="Calcualtions.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
