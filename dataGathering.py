@@ -2,7 +2,7 @@ from PIL import Image
 import pandas as pd
 from statistics import mean
 import numpy as np
-
+import pulp
 
 def extractGraph(file_path, box):
     im = Image.open(file_path)

@@ -1,5 +1,6 @@
 from constants import Constants
 import math
+import pulp
 
 class Model:
     _CONSTANT = [4.624179, 23.20088, -1.906446, -6.159904, 18.77025]
